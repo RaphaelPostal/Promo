@@ -39,12 +39,13 @@
 			echo json_encode($erreurs);
 
 		}else{
-
-			$bdd = new PDO('mysql:host=localhost;dbname=mmi19d09; charset=utf8', 'mmi19d09', 'To68Da43&@');
+			require('../config.inc.php');
+			$bdd = new PDO('mysql:host=localhost;dbname=mmi19d09; charset=utf8', USER, PASS);
 			$verif = 'SELECT * FROM subscribers WHERE email="'.$_POST['email'].'"';
 			$exe = $bdd->query($verif);
 			$nombre = $exe->rowCount();
-			$req = 'INSERT INTO subscribers VALUES(NULL, "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['email'].'")';
+			if($nombre==0){
+				$req = 'INSERT INTO subscribers VALUES(NULL, "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['email'].'")';
 			
 			$bdd->query($req);
 
@@ -54,6 +55,11 @@
 			$message= $_POST['prenom'].', merci de vous être inscrit à notre newsletter.';
 			mail($destinataire, $subject, $message, $headers);
 			echo json_encode(true);
+		}else{
+			$erreurs['already']='deja';
+			echo json_encode($erreurs);
+		}
+			
 			
 
 		}

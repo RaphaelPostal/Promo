@@ -351,7 +351,7 @@
 
             
                 success: function(reponse){
-                console.info(reponse)
+              
                     if(reponse===true){
                         console.info('OK')
                         msgOK= '<span class="confirmation">Vous êtes bien inscrits à notre newsletter !</span>'
@@ -361,13 +361,12 @@
                         $('<span class="confirmation">Félicitations ! Vous êtes inscrits à notre newsletter !</span>').insertAfter($('#contact-form'));
                         
 
+                    }else if(reponse.already=='deja'){
+
+                        $('<span class="message-erreur">Cet utilisateur est déjà inscrit !</span>').insertAfter($('#contact-form'));
                     }else{
-                        
-
-                        msgErreur= '<span class="message-erreur">Un ou plusieurs champs comportent des erreurs.</span>';
-
-                        $('<span class="message-erreur">Un ou plusieurs champs comportent des erreurs.</span>').insertAfter($('#contact-form'));
-
+    
+                        $('<span class="message-erreur">Un ou plusieurs champs comportent assasdes erreurs.</span>').insertAfter($('#contact-form'));
 
                     }
 
