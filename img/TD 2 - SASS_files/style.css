@@ -1,0 +1,90 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+
+header {
+  background-image: url(./img/back_header.png);
+  height: 720px;
+  background-size: 100%;
+  width: 100%;
+}
+header nav {
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 85px;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+header nav ul li {
+  margin-top: 25px;
+}
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#aboutus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  height: 300px;
+}
+#aboutus p {
+  text-align: center;
+  font-weight: 100;
+}
+
+#work #work1 {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+#work #work1 #work1_1 {
+  width: 70%;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+#work #work1 #work1_1 #img1_work1_1 {
+  position: absolute;
+  width: 100%;
+}
+#work #work1 #work1_1 #img2_work1_1 {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-left: auto;
+}
+#work #work1 #work1_2 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 650px;
+}
+#work #work1 #work1_2 p {
+  text-align: justify;
+}
+#work #work1 #work1_2 #img2_work1_2 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

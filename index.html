@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Site promotionnel The Toria's League</title>
+    <meta name="description" content="Site dédié à la promotion de notre nouveau jeu de carte The Toria's League, disponible également en ligne">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/plateau.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+<body>
+<div id="main">
+    <header>
+           <img src="img/fond1.5.png" id="fond" />
+            <div id="icon">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <a href="index_eng.html"><i class="fas fa-flag-usa"></i></a>
+                <a href="produit.html"><i class="fas fa-shopping-cart"></i></a>
+                <nav role="navigation">
+                    <div id="menuToggle">
+                    <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
+                  <input type="checkbox" />
+                  <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <!--Too bad the menu has to be inside of the button but hey, it's pure CSS magic. -->
+                  <ul id="menu">
+                    <a href="index.html"><li>Accueil</li></a>
+                    <a href="#promo"><li>Vidéo promotionnelle</li></a>
+                    <a href="#prez"><li>Présentation du jeu</li></a>
+                    <a href="#regles"><li>Vidéo des règles du jeu</li></a>
+                    <a href="#jeu"><li>Présentation du packaging</li></a>
+                    <a href="#plateau"><li>Présentation du plateau de jeu</li></a>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+    </header>
+        <section id="promo">
+            <h1 class="titre">VIDEO DE PROMOTION DU JEU</h1>
+            <div id="video_promo">
+                <video class="vid" src="video/video0.mov" autoplay muted>
+                </video>
+            </div>
+        </section>
+        <section id="prez">
+            <h1 class="titre">PRESENTATION</h1>
+            <div id="prez_tout">
+                <!--<img id="chevalier" src="img/perso2.png">
+                <img id="monstre" src="img/perso1.png">-->
+                <img id="assassin" src="img/perso3.png">
+                <div id="prez_text">
+                    <p>La ville de Toria a besoin d'aide. Son fabuleux trésor a été dérobé, et emmené au Donjon Noir, l'endroit le plus sinistre de la région.
+                    Celui qui ramènera ce trésor à la cité y sera à jamais considéré comme un héros par ses habitants.
+                    Cette quête, en tant qu'aventurier, vous intéresse tout particulièrement.</p>
+                    <p>Cependant, il s'avère que le Donjon Noir est non seulement sinistre, mais grouille aussi de dangers inconnus. Ce n’est donc pas d'un héros solitaire dont Toria a besoin, mais de professionnels.</p>
+                    <p>Vous savez que seul, vous n'irez pas bien loin. C'est pourquoi votre but est de constituer la meilleure équipe possible en choisissant parmi les plus puissants et téméraires guerriers de la contrée.</p>
+                    <p>Mais attention, les guerriers que vous convoitez sont des mercenaires. Ils loueront donc leurs services au plus offrant.
+                    Et cela tombe mal, un autre chef venant d’une ville voisine, et avide de richesses, vient vous défier !</p>
+                    <p>Il faudra donc être meilleur négociant que votre concurrent, en proposant le meilleur équipement et le plus d'objets possible à ceux que vous voulez recruter.</p>
+                    <p>The Toria’s League est un jeu de cartes se jouant en 1 contre 1. À tour de rôle, les joueurs choisissent une action parmi les quatre qui leur sont proposées.
+                    Leur but est d’amasser le plus de cartes objet afin d’obtenir les services des différents mercenaires. Le joueur qui en a recruté le plus gagne la partie.</p>
+                </div>
+            </div>
+        </section>
+        <section id="regles">
+            <h1 class="titre">VIDEO DES REGLES DU JEU</h1>
+            <div id="video_regles">
+                <video class="vid" src="video/video0.mov" autoplay muted></video>
+            </div>
+        </section>
+        <section id="jeu">
+            <h1 class="titre">JEU DE SOCIETE</h1>
+            <di id="contenant">
+                <div id="packshot"></div>
+                <div id="contenu">
+                    <div id="contenu1">
+                        <p>Dans un univers fantastique et médiéval, ce jeu vous permet de recruter une équipe d'élite afin d'aller à
+                        l'assaut du funeste Donjon Noir où est caché le trésor dérobé de votre village.
+                        Mais attention, un aventurier du village voisin compte bien vous mettre des bâtons dans les roues en recrutant
+                        les mercenaires que vous convoitez.</p>
+                    </div>
+                    <div id="contenu2">
+                        <p>• 9 ans et plus (12 ans et plus pour la version numérique)<br>
+                        • Parties rapides (environ 20 minutes)<br>
+                        • Jeu de stratégie</p>
+                    </div>
+                    <a href="produit.html"><button id="myBtn">ACHETER</button></a>
+                </div>
+            </di>
+        </section>
+        <section id="sc_plateau">
+            <h1 class="titre">JOUER EN LIGNE</h1>
+   
+            <aside id="aside_plateau">
+   
+               <p>Pour ceux qui voudraient jouer avec des proches malgré la distance, il existe une version numérique en ligne.<br />
+                   Un classement hebdomadaire est disponible chaque semaine, donc
+               venez vous mesurer aux joueurs du monde entier et devenez le plus puissant chef d'escouade ! </p>
+   
+           </aside>
+   
+   
+           <div id="plateau">
+            <div id="deck-nord">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+                <img class="carte-objet" src="img/hidden.png">
+            </div>
+
+            <div id="actions-nord">
+                <img class="action_nord" src="img/secret_rouge.png">
+                <img class="action_nord" src="img/depot_rouge.png">
+                <img class="action_nord" src="img/offre_rouge.png">
+                <img class="action_nord" src="img/echange_rouge.png">
+            </div>
+
+            <div id="nbs-cartes-nord">
+                    <div class="nb-carte-nord" id="nb1">
+                        <div class="indics">
+                            
+                        </div>
+                    </div>
+                    <div class="nb-carte-nord" id="nb2">
+                        <div class="indics">
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-nord" id="nb3">
+                        <div class="indics">
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-nord" id="nb4">
+                        <div class="indics">
+                            <div class="indic"></div>
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-nord" id="nb5"><div class="indics">
+                        <div class="indic"></div>
+                        <div class="indic"></div>
+                    </div>
+                </div>
+                <div class="nb-carte-nord" id="nb6">
+                    <div class="indics">
+                        <div class="indic"></div>
+                        
+                    </div>
+                </div>
+                <div class="nb-carte-nord" id="nb7">
+                    <div class="indics">
+                        
+                        <div class="indic"></div>
+                        <div class="indic"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cartes-persos">
+                <div id="emp1" class="emp">
+                    <img class="pion" id="pion1" src="img/pion.png">
+                <img class="carte-perso" src="img/krulmo.png">
+                </div>
+                
+
+                <div id="emp2" class="emp">
+                <img class="pion" id="pion2" src="img/pion.png">
+                <img class="carte-perso" src="img/ganormo.png">
+                </div>
+                
+
+                <div id="emp3" class="emp">
+                <img class="pion" id="pion3" src="img/pion.png">
+                <img class="carte-perso" src="img/rasdar.png">
+                </div>
+                
+
+                <div id="emp4" class="emp">
+                <img class="pion" id="pion4" src="img/pion.png">
+                <img class="carte-perso" src="img/arcadia.png">
+                </div>
+                
+
+                <div id="emp5" class="emp">
+                <img class="pion" id="pion5" src="img/pion.png">
+                <img class="carte-perso" src="img/astralia.png">
+                </div>
+                
+
+                <div id="emp6" class="emp">
+                <img class="pion" id="pion6" src="img/pion.png">
+                <img class="carte-perso" src="img/tharuk.png">
+                </div>
+                
+
+                <div id="emp7" class="emp">
+                <img class="pion" id="pion7" src="img/pion.png">
+                <img class="carte-perso" src="img/sofia.png">
+                </div>
+            </div>
+            
+
+            <div id="pioche"><img class="carte-pioche" src="img/hidden.png"></div>
+
+            <div id="nbs-cartes-sud">
+                    <div class="nb-carte-sud" id="nb1">
+                        <div class="indics">
+                            <div class="indic"></div>
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-sud" id="nb2">
+                        <div class="indics"></div>
+                    </div>
+                    <div class="nb-carte-sud" id="nb3">
+                        <div class="indics">
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-sud" id="nb4">
+                        <div class="indics">
+                            <div class="indic"></div>
+                        </div>
+                    </div>
+                    <div class="nb-carte-sud" id="nb5"><div class="indics">
+                    </div>
+                </div>
+                <div class="nb-carte-sud" id="nb6">
+                    <div class="indics">
+                        <div class="indic">
+
+                        </div>
+                        <div class="indic"></div>
+                    </div>
+                </div>
+                <div class="nb-carte-sud" id="nb7">
+                    <div class="indics">
+                        <div class="indic"></div>
+                        <div class="indic"></div>
+                        <div class="indic"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="actions-sud">
+                <img class="action_sud" src="img/secret_bleu.png">
+                <img class="action_sud" src="img/depot_bleu.png">
+                <img class="action_sud" src="img/offre_bleu.png">
+                <img class="action_sud" src="img/echange_bleu.png">
+            </div>
+
+            <div id="deck-sud">
+
+                <img class="carte-objet" src="img/dagues.png">
+                <img class="carte-objet" src="img/arc.png">
+                <img class="carte-objet" src="img/lanterne.png">
+                <img class="carte-objet" src="img/epee.png">
+                <img class="carte-objet" src="img/epee.png">
+                <img class="carte-objet" src="img/sceptre.png">
+                <img class="carte-objet" src="img/sceptre.png">
+            </div>
+        </div>
+   
+           <p class="jouer"><a id="jouer" href="#">JOUER</a></p>
+           <h4 id="titre-newsletter">POURSUIVEZ L'AVENTURE DE THE TORIA'S LEAGUE EN <br>
+            <span>DEVENANT MEMBRE DE NOTRE NEWSLETTER !</span></h4>
+            <div id="popup">
+                <form action="validation.php" method="post" id="contact-form">
+    
+            <label for="prenom">Votre prénom*</label>
+            <input type="text" name="prenom" id="prenom">
+    
+            <label for="nom">Votre nom*</label>
+            <input type="text" name="nom" id="nom">
+            
+            <label for="email">Email*</label>
+            <input type="text" name="email" id="email">
+            
+    
+            <input type="text" name="email_" id="honey" style="display: none">
+            <!-- piège à robots pour éviter les spams -->
+            
+            
+            <input type="submit" name="envoyer" value="ENVOYER">
+        </form>
+            </div>
+       </section>
+       
+</div>
+
+<footer>
+        <div id="cont1">
+            <img src="img/logo_agence_blanc.png">
+            <img src="img/logo_jeu.png">
+            <div>
+                <a href="">Politique de confidentialité</a><br>
+                <a href="">Mentions légales</a><br>
+                <a href="">Qui sommes-nous ?</a><br>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript">
+    var click= false;
+      $('#titre-newsletter span').click(function(){
+       if(click == false){
+        $//('#popup').show();
+        //$('#popup').css('animation', 'fadein 0.3s')
+        $('#popup').slideDown(300);
+
+      }else{
+
+        $('#popup').slideUp(300);
+  
+      }
+      click =! click;
+    })
+
+      $('form').submit(function(e){
+            e.preventDefault();
+            reset()
+
+
+            envoiFormulaire()
+        })
+
+        function reset(){
+            $('.message-erreur').remove()
+            $('.invalid').removeClass();
+            
+        }
+
+        function envoiFormulaire(){
+            var postData = $('form').serialize()
+            console.info(postData);
+
+            $.ajax({
+                dataType: 'json',
+                type: 'POST',
+                url: 'validation.php',
+                data:postData, 
+
+            
+                success: function(reponse){
+                console.info(reponse)
+                    if(reponse===true){
+                        console.info('OK')
+                        msgOK= '<span class="confirmation">Vous êtes bien inscrits à notre newsletter !</span>'
+                        $('.confirmation').remove()
+                        $('textarea').val('')
+                        $('input:not(input[type="submit"])').val('');
+                        $('<span class="confirmation">Félicitations ! Vous êtes inscrits à notre newsletter !</span>').insertAfter($('#contact-form'));
+                        
+
+                    }else{
+                        
+
+                        msgErreur= '<span class="message-erreur">Un ou plusieurs champs comportent des erreurs.</span>';
+
+                        $('<span class="message-erreur">Un ou plusieurs champs comportent des erreurs.</span>').insertAfter($('#contact-form'));
+
+
+                    }
+
+                }//FIN SUCCESS
+            
+            
+
+            })//FIN AJAX
+        }//FIN ENVOI FORMULAIRE
+</script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+@font-face {
+    font-family: "aventura";
+    src: url(../typo/Aventura-Bold.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica';
+}
+
+/* HEADER */
+/*header {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/fond1.5.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}*/
+#main{
+  position: relative;
+  bottom: 50px;
+}
+header #fond{
+
+  width: 100%;
+  height: auto;
+
+
+}
+
+
+
+#icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 175%;
+
+    position: fixed;
+    
+    top: 0;
+    align-items: center;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 4;
+
+}
+.fas {
+    padding: 20px;
+    color: white;
+}
+/*LA NAV*/
+#menuToggle{
+  display: block;
+  position: relative;
+  /*top: 50px;
+  left: 50px;*/
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a{
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover{
+  color: #fcd21c;
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark. */
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*But let's hide the middle one.*/
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Make this absolute positioned at the top left of the screen */
+#menu{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -320px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+  text-align: right;
+}
+nav {
+    padding: 20px;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/*DIV VIDEO PROMOTIONNELLE*/
+#promo {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/fond4.0.png);
+    background-size: 100%;
+}
+#video_promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vid {
+    width: 30%;
+    margin: 5%;
+}
+.titre {
+    font-family: 'aventura';
+    color: #fcd21c;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/*DIV PRÉSENTATION DU JEU*/
+#prez {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/fond2.0.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+#prez_tout{
+  width: auto;
+  height: 70vw;
+
+}
+
+#prez_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-left: 17%;
+    margin-right: 17%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 25px 50px 25px 50px;
+    color: white;
+    z-index: 1;
+    
+}
+
+#chevalier{
+  position: relative;
+  z-index: auto;
+  left: 5vw;
+  width: 20%;
+  top: 10vh;
+}
+#monstre{
+  position: absolute;
+  z-index: auto;
+  top: 10vh;
+  left: 30vw;
+}
+#assassin{
+  position: absolute;
+  right: 7%;
+  z-index: 2;
+  width: 15%;
+}
+/*DIV VIDEO RÈGLES DU JEU*/
+#regles{
+    width: 100%;
+    height: auto;
+    
+    background-image: url(../img/fond4.0.png);
+    background-size: 100%;
+}
+#video_regles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*DIV PRÉSENTATION DU PACKAGING DU JEU*/
+#jeu {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/fond2.0.png);
+    background-size: 100%;
+}
+#contenant {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#packshot {
+    background-color: whitesmoke;
+    width: 30%;
+    height: 70vh;
+}
+#contenu {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+#contenu a{
+  text-align: center;
+}
+button {
+    background-color: #42A00E;
+    border: none;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-family: 'aventura';
+    transition: all 0.3s ease;
+
+}
+button:hover{
+  padding: 12px 25px 12px 25px;
+	box-shadow: inset 120px 0 #56b91f;
+  height: auto;
+}
+#contenu1{
+    color: white;
+  text-align: justify;
+}
+#contenu2{
+    color: #56b91f;
+}
+/*DIV DU PLATEAU DE JEU*/
+#plateau {
+    
+}
+
+/*DIV DU FOOTER*/
+footer {
+    
+}
+
+/*MODAL ACHAT*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+img_modal{
+  background-color: black;
+  width: 25px;
+  height: 100px;
+}
+
+
+/*NEWSLETTER*/
+
+/*NEWSLETTER*/
+
+#titre-newsletter{
+  text-align: center;
+  margin-top: 60px;
+  font-family: aventura;
+  font-size: 20px;
+}
+
+#titre-newsletter span{
+  color: black;
+  transition: all .3s ease;
+  text-decoration: underline;
+}
+
+#titre-newsletter span:hover{
+  color:#55C2DB;
+  cursor: pointer;
+}
+
+#titre-newsletter div{
+  color: white;
+}
+
+
+
+
+
+/*Popup NEWSLETTER*/
+
+#popup{
+  display: none;
+  background-color: #55C2DB;
+  
+  
+  padding: 20px;
+
+}
+
+#contact-form{
+  margin: auto;
+  display: grid;
+  grid-template-columns: 120px 250px;
+  grid-template-rows: 30px 30px 30px 30px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 400px;
+  /*grid-auto-columns: 100px;*/
+  font-family: helvetica;
+
+}
+
+#contact-form input[type="submit"]{
+  background-color: #3C86A0;
+  border: none;
+  box-shadow: none;
+  font-family: aventura;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+#contact-form input[type="submit"]:hover{
+  transform: scale(1.05);
+  box-shadow: inset 50px blue;
+}
+
+.message-erreur{
+
+  
+  /*text-shadow: 0 0 0.1em red;*/
+  display: inline-block;
+  width: 100%;
+  text-align:center;
+  animation-name: arrive;
+  animation-duration: 0.3s;
+  margin-top: 20px;
+  font-family: helvetica;
+}
+
+.confirmation{
+
+  display: inline-block;
+  width: 100%;
+  text-align:center;
+  animation-name: arrive;
+  animation-duration: 0.3s;
+  margin-top: 20px;
+  font-family: helvetica;
+
+}
+
+@keyframes arrive{
+
+  0%{
+    transform: translateX(50px);
+    opacity: 0; 
+
+  }
+
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+}
+
+
+
+@media all and (max-width: 900px){
+
+  #prez_text p{
+    font-size: 1.5vw !important;
+    
+  }
+
+}
+
+@media all and (max-width: 450px){
+
+ #prez_tout{
+  width: auto;
+  height: 80vw;
+
+}
+
+
+}
+
+@media all and (min-width: 1000px){
+
+ #prez_tout{
+  width: auto;
+  height: 60vw;
+
+}
+
+}

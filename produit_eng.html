@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Site promotionnel The Toria's League</title>
+    <meta name="description" content="Site dédié à la promotion de notre nouveau jeu de carte The Toria's League, disponible également en ligne">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/plateau.css">
+    <link rel="stylesheet" type="text/css" href="css/achat.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+<body>
+<div id="main">
+    <header id="header_achat">
+            <div id="icon">
+                <a href="index_eng.html"><i class="fas fa-home"></i></a>
+                <a href="produit.html"><i class="fas fa-flag-usa"></i></a>
+                <a href="produit_eng.html"><i class="fas fa-shopping-cart"></i></a>
+                <nav role="navigation">
+                    <div id="menuToggle">
+                    <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
+                  <input type="checkbox" />
+                  <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <!--Too bad the menu has to be inside of the button but hey, it's pure CSS magic. -->
+                  <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="#promo"><li>Promotional video</li></a>
+                    <a href="#prez"><li>Game presentation</li></a>
+                    <a href="#regles"><li>Rule video</li></a>
+                    <a href="#jeu"><li>Packaging presentation</li></a>
+                    <a href="#plateau"><li>Game board presentation</li></a>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <h1 id="titre_achat">BUY THE GAME</h1>
+    </header>
+    <section id="produit">
+        <h1 class="titre">THE TORIA'S LEAGUE GAME</h1>
+        <div id="fiche_produit">
+          <div id="img_produit"></div>
+          <div id="text_produit">
+            <p>Price : 20€</p>
+            <a href="achat.html"><button id="myBtn">BUY</button></a>
+          </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>
