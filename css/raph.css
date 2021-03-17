@@ -28,6 +28,14 @@ body{
 	width: 90%;
 }
 
+#prez{
+	position: relative;
+}
+
+#assassin{
+	top: 110%;
+}
+
 
 @media all and (max-width: 900px){
 
