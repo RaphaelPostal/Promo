@@ -1,0 +1,59 @@
+body{
+	background-image: url('../img/fond4.0.png');
+	background-attachment: fixed;
+
+}
+
+#titre-newsletter span{
+  color: white;
+  transition: all .3s ease;
+  text-decoration: underline;
+}
+
+#titre-newsletter span:hover{
+  color:#55C2DB;
+  cursor: pointer;
+}
+
+#contenant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#contenu, #packshot{
+	margin: auto;
+	width: 90%;
+}
+
+
+@media all and (max-width: 900px){
+
+  #prez_text{
+  	width: 60%;
+		}	
+
+  #prez_text p{
+    font-size: 1.8vw !important;
+    
+  }
+
+  #regles{
+  	margin-top: 60px;
+  }
+
+}
+
+@media all and (max-width: 800px){
+
+  #contenant {
+    
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+
+}

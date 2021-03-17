@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica';
+    color: white;
 }
 
 /* HEADER */
@@ -213,8 +214,8 @@ nav {
     align-items: center;
     text-align: center;
     height: auto;
-    margin-left: 17%;
-    margin-right: 17%;
+    margin: auto;
+    width: 60%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 25px 50px 25px 50px;
@@ -374,16 +375,7 @@ img_modal{
   font-size: 20px;
 }
 
-#titre-newsletter span{
-  color: black;
-  transition: all .3s ease;
-  text-decoration: underline;
-}
 
-#titre-newsletter span:hover{
-  color:#55C2DB;
-  cursor: pointer;
-}
 
 #titre-newsletter div{
   color: white;
