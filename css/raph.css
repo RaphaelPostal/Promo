@@ -34,7 +34,11 @@ body{
 }
 
 #assassin{
-	top: 110%;
+	top: 150%;
+}
+
+#regles{
+	margin-top: 50px;
 }
 
 
