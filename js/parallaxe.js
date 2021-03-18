@@ -5,9 +5,10 @@ $(document).ready(function(){
 	
 
 	window.addEventListener('scroll', function (){
-            var value = window.scrollY;
+            var scroll = window.scrollY;
 
-            $('#assassin').css('transform', 'translateY('+-0.6*value+'px)')
+            $('#assassin').css('transform', 'translateY('+-0.6*scroll+'px)')
+            $('body').css('background-position', ''+-0.4*scroll+'px')
             //assassin.style.top = -value * 1.4 + 'px';
            
         })
