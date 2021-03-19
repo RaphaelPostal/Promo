@@ -3,16 +3,13 @@
     src: url(../typo/Aventura-Bold.otf);
 }
 
-#header_achat {
-    background-image: url(../img/fond1.4.png)
-}
+
 
 #titre_achat {
     display: block;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 70vh;
     margin-top: 0;
     font-family: 'aventura';
     color: #fcd21c;
@@ -21,8 +18,6 @@
 }
 
 #produit {
-    background-image: url(../img/fond2.0.png);
-    background-size: 100%;
     min-height: 100vh;
     width: 100%;
 }

@@ -7,13 +7,16 @@
     <meta name="description" content="Site dédié à la promotion de notre nouveau jeu de carte The Toria's League, disponible également en ligne">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/parallaxe.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/plateau.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/raph.css">
 </head>
 <body>
 <div id="main">
     <header>
+        <img src="img/fond1.5.png" id="fond" />
             <div id="icon">
                 <a href="index_eng.html"><i class="fas fa-home"></i></a>
                 <a href="index.html"><i class="fas fa-flag-usa"></i></a>
@@ -297,36 +300,86 @@
         </form>
             </div>
        </section>
+</div>
        <footer>
         <div id="cont1">
             <img src="img/logo_agence_blanc.png">
             <img src="img/logo_jeu.png">
             <div>
-                <a href="">Politique de confidentialité</a><br>
-                <a href="">Mentions légales</a><br>
-                <a href="">Qui sommes-nous ?</a><br>
+                <a href="">CGU</a><br>
+                <a href="">Legale notices</a><br>
+                <a href="">Who are we ?</a><br>
             </div>
         </div>
     </footer>
-</div>
+
 <script type="text/javascript">
     var click= false;
-      $('#titre-newsletter span').click(function(){
-       if(click == false){
-        $('#popup').show();
-        $('#popup').css('animation', 'fadein 0.3s')
+    $('#titre-newsletter span').click(function(){
+        if(click == false){
+            $//('#popup').show();
+            //$('#popup').css('animation', 'fadein 0.3s')
+            $('#popup').slideDown(300);
 
-      }else{
+        }else{
 
-        $('#popup').css('animation', 'fadeout 0.3s')
-        setTimeout(function(){
-         $('#popup').hide();
-       },200)
+            $('#popup').slideUp(300);
 
-
-      }
-      click =! click;
+        }
+        click =! click;
     })
+
+    $('form').submit(function(e){
+        e.preventDefault();
+        reset()
+
+
+        envoiFormulaire()
+    })
+
+    function reset(){
+        $('.message-erreur').remove()
+        $('.invalid').removeClass();
+
+    }
+
+    function envoiFormulaire(){
+        var postData = $('form').serialize()
+        console.info(postData);
+
+        $.ajax({
+            dataType: 'json',
+            type: 'POST',
+            url: 'validation.php',
+            data:postData,
+
+
+            success: function(reponse){
+
+                if(reponse===true){
+                    console.info('OK')
+                    msgOK= '<span class="confirmation">You have subscribed to our newsletter !</span>'
+                    $('.confirmation').remove()
+                    $('textarea').val('')
+                    $('input:not(input[type="submit"])').val('');
+                    $('<span class="confirmation">Congratulations ! You have subscribed to our newsletter !</span>').insertAfter($('#contact-form'));
+
+
+                }else if(reponse.already=='deja'){
+
+                    $('<span class="message-erreur">This user is already registered !</span>').insertAfter($('#contact-form'));
+                }else{
+
+                    $('<span class="message-erreur">One or more field have a mistake.</span>').insertAfter($('#contact-form'));
+
+                }
+
+            }//FIN SUCCESS
+
+
+
+        })//FIN AJAX
+    }//FIN ENVOI FORMULAIRE
 </script>
 </body>
 </html>
